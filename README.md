@@ -1,55 +1,85 @@
 # 🛒 E-Commerce Customer Analytics & RFM Segmentation
 
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0+-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![Power BI](https://img.shields.io/badge/Power_BI-Desktop-F2C811?style=flat-square&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
+[![Excel](https://img.shields.io/badge/Microsoft_Excel-Power_Query-217346?style=flat-square&logo=microsoftexcel&logoColor=white)](https://www.microsoft.com/excel)
+[![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-150458?style=flat-square&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-Scientific_Computing-013243?style=flat-square&logo=numpy&logoColor=white)](https://numpy.org/)
+[![Dataset](https://img.shields.io/badge/Transactions-779K+_Cleaned-green?style=flat-square)](https://github.com/adityanarayanpanda/ecommerce-customer-analytics-rfm)
+
+---
+
 ## 📌 Project Overview
 
 This project analyzes e-commerce transaction data to understand **customer behavior, purchasing patterns, product performance, market performance, and customer value**.
 
-The project uses an end-to-end data analytics workflow:
+The project follows an end-to-end data analytics workflow:
 
 **Excel & Power Query → MySQL & SQL → Python & Statistics → RFM Segmentation → Power BI → Business Report**
 
-The main objective is to convert raw transaction data into **clear business insights and actionable recommendations** that can help an e-commerce business improve customer retention, identify high-value customers, optimize products, and reduce customer churn.
+The primary objective is to transform raw transaction records into **clear business insights and actionable recommendations** that help an e-commerce business improve customer retention, identify high-value customers, evaluate product performance, and address customer churn.
+
+```text
+                           END-TO-END PROJECT FLOW
+ ┌─────────────────┐     ┌──────────────────┐     ┌──────────────────┐
+ │   Raw Retail    │────>│  Excel / Power   │────>│   MySQL Database │
+ │ Transaction Log │     │  Query Cleaning  │     │   & SQL Analysis │
+ └─────────────────┘     └──────────────────┘     └──────────────────┘
+                                                           │
+ ┌─────────────────┐     ┌──────────────────┐              ▼
+ │ 90-Day Action   │<────│   3-Page Power   │<────┌──────────────────┐
+ │ Plan & Report   │     │   BI Dashboard   │     │ Python & Pandas  │
+ └─────────────────┘     └──────────────────┘     │ Statistics & RFM │
+                                                  └──────────────────┘
+```
 
 ---
 
-## 🎯 Business Objectives
+## 🎯 Key Business Highlights
 
-The analysis focuses on answering important business questions:
-
-- How is the business performing overall?
-- Which customers generate the most revenue?
-- How frequently do customers purchase?
-- Which customers are most valuable to the business?
-- Which customers are at risk of becoming inactive?
-- Which customers may have potential for future growth?
-- Which products generate the most revenue?
-- Which products have the highest sales volume?
-- Which countries contribute the most revenue?
-- How does revenue change over time?
-- How concentrated is revenue among high-value customers?
-- What business actions should be taken based on the analysis?
-
----
-
-## 🧰 Tools & Technologies
-
-| Tool | Purpose |
-|---|---|
-| **Microsoft Excel** | Initial data inspection and preparation |
-| **Power Query** | Data cleaning, transformation, and dataset preparation |
-| **MySQL** | Data storage, validation, querying, and business analysis |
-| **SQL** | KPI analysis, customer analysis, RFM calculation, product and market analysis |
-| **Python** | Statistical analysis, customer analysis, RFM validation, outlier analysis |
-| **Pandas** | Data manipulation and analysis |
-| **NumPy** | Numerical analysis |
-| **Matplotlib** | Data visualization |
-| **Power BI** | Interactive dashboard and business reporting |
-| **DAX** | Measures and analytical calculations |
-| **GitHub** | Project documentation and version control |
+| Metric / Dimension | Analyzed Value | Business Implication |
+|---|---|---|
+| **Cleaned Transaction Volume** | **779,425 records** across 2 years | Validated baseline with missing IDs and non-positive records removed |
+| **Analyzed Customers** | **5,878 customers** | Customer-level aggregation for behavioral analysis |
+| **Analyzed Products** | **4,600+ products** | Comprehensive catalog volume and monetary evaluation |
+| **Total Customer Revenue** | **Approximately ₹17.375M** | Baseline monetary volume across analyzed customer base |
+| **High-Value Concentration (IQR)** | **633 customers (~10.8%) generate ~65.3% of revenue (~₹11.34M)** | Substantial revenue concentration requiring prioritized customer retention |
+| **Champions Segment** | **1,289 customers contribute ~68% of total revenue** | Core customer segment requiring dedicated retention and loyalty programs |
+| **At-Risk Customers** | **825 customers (~9% revenue contribution)** | Valuable past customers showing declining activity; prime reactivation candidates |
+| **Lost Customers** | **Approximately 2,000 customers (~4% revenue)** | Significant pool of dormant customers suitable for win-back campaigns |
+| **Geographic Concentration** | **United Kingdom generates ~₹14.4M (~83% of revenue)** | Core domestic dependency; opportunity for international diversification |
+| **Revenue Skewness** | **Mean: ₹22.29 vs. Median: ₹12.48 per transaction** | Right-skewed transactions; median and distribution analysis provide reliable insight |
+| **Outlier Investigation** | **Invoice #16446: 80,995 units = ₹168,469.60** | Validated extreme transaction retained as a genuine large purchase |
 
 ---
 
-# 📂 Project Structure
+## 📑 Table of Contents
+
+- [📌 Project Overview](#-project-overview)
+- [🎯 Key Business Highlights](#-key-business-highlights)
+- [📂 Repository Structure](#-repository-structure)
+- [📊 Dataset & Data Preparation](#-dataset--data-preparation)
+- [🗄️ MySQL Database & SQL Analysis](#️-mysql-database--sql-analysis)
+- [🐍 Python & Statistical Analysis](#-python--statistical-analysis)
+- [📐 RFM Scoring & Customer Segmentation](#-rfm-scoring--customer-segmentation)
+- [⭐ High-Value Customer Analysis](#-high-value-customer-analysis)
+- [🌍 Geographic Market & Product Performance](#-geographic-market--product-performance)
+- [📈 Power BI Interactive Dashboard](#-power-bi-interactive-dashboard)
+- [💡 Key Business Insights](#-key-business-insights)
+- [🚨 Business Problems Identified](#-business-problems-identified)
+- [🎯 Strategic Business Recommendations](#-strategic-business-recommendations)
+- [📆 90-Day Business Action Plan](#-90-day-business-action-plan)
+- [🔬 Technical Methodology](#-technical-methodology)
+- [📁 Project Deliverables](#-project-deliverables)
+- [🚀 Future Analytics Opportunities](#-future-analytics-opportunities)
+- [🧠 What This Project Demonstrates](#-what-this-project-demonstrates)
+- [💻 Getting Started](#-getting-started)
+- [👨‍💻 Author](#-author)
+
+---
+
+## 📂 Repository Structure
 
 ```text
 ecommerce-customer-analytics-rfm/
@@ -71,984 +101,492 @@ ecommerce-customer-analytics-rfm/
 │
 └── sql/
     └── ecommerce_analysis.sql
+```
 
-📊 Dataset
+---
 
-The project uses the Online Retail II transaction dataset.
+## 📊 Dataset & Data Preparation
 
-The original dataset contains two yearly sheets:
+The project uses the **Online Retail II** dataset, which contains transaction-level information for an online retail business:
 
-Year 2009-2010
-Year 2010-2011
+* **`Invoice`**: Transaction identifier.
+* **`StockCode`**: Product / item code.
+* **`Description`**: Product name.
+* **`Quantity`**: Number of units purchased.
+* **`InvoiceDate`**: Timestamp of transaction.
+* **`Price`**: Unit price of the product.
+* **`Customer ID`**: Customer identifier.
+* **`Country`**: Country of customer residence.
 
-The dataset contains transaction-level information such as:
+A revenue field was calculated as:
+$$\text{Revenue} = \text{Quantity} \times \text{Price}$$
 
-Invoice
-Stock Code
-Product Description
-Quantity
-Invoice Date
-Price
-Customer ID
-Country
+### Data Cleaning Steps (Excel & Power Query)
+1. **Combined Yearly Datasets**: Merged Year 2009–2010 and Year 2010–2011 sheets.
+2. **Removed Overlap**: Eliminated the overlapping period between the two yearly files.
+3. **Deduplication**: Removed exact duplicate rows.
+4. **Customer Identification**: Removed records with missing `Customer ID`.
+5. **Quantity & Price Validation**:
+   - Filtered out records where `Quantity <= 0`.
+   - Filtered out records where `Price <= 0`.
+6. **Integrity Checks**: Verified blank product descriptions and country values.
+7. **Datetime Formatting**: Converted `InvoiceDate` to standard date/time format and generated SQL-ready datetime values.
+8. **Final Cleaned Dataset**: **779,425 valid transaction rows** prepared for MySQL and Python analysis with no unexpected NULL values in analyzed fields.
 
-A revenue field was created using:
+---
 
-Revenue = Quantity × Price
-🧹 Data Preparation & Cleaning
+## 🗄️ MySQL Database & SQL Analysis
 
-The raw dataset was prepared using Excel and Power Query before loading it into MySQL and Python.
+**Database**: `ecommerce_analytics`  
+**Main Table**: `ecommerce_cleaned_data`
 
-Main cleaning steps
-Combined the two yearly datasets.
-Removed the overlapping period between the two sheets.
-Removed exact duplicate rows.
-Removed records with missing Customer ID.
-Removed records where Quantity was less than or equal to zero.
-Removed records where Price was less than or equal to zero.
-Checked missing product descriptions.
-Checked missing country values.
-Converted InvoiceDate into a proper Date/Time format.
-Created Revenue using Quantity × Price.
-Created SQL-compatible datetime values.
-Prepared the cleaned dataset for MySQL import.
-Final cleaned dataset
+```sql
+CREATE DATABASE IF NOT EXISTS ecommerce_analytics;
+USE ecommerce_analytics;
 
-779,425 transaction records
+CREATE TABLE ecommerce_cleaned_data (
+    Invoice VARCHAR(20),
+    StockCode VARCHAR(20),
+    Description VARCHAR(255),
+    Quantity INT,
+    InvoiceDate DATETIME,
+    Price DECIMAL(10, 2),
+    Customer_ID INT,
+    Country VARCHAR(100),
+    Revenue DECIMAL(12, 2)
+);
+```
 
-The cleaned data was then loaded into MySQL for structured analysis.
+### SQL Analysis Scope
+The analysis in `sql/ecommerce_analysis.sql` covers:
+1. **Overall Business KPIs**: Total Revenue, Total Orders, Total Customers, Total Products, Total Quantity, and Average Order Value.
+2. **Customer Purchase Behavior**: Top customers by revenue, orders, and quantity; average spending; purchase frequency.
+3. **RFM Base Calculation**: Recency, Frequency, and Monetary values aggregated at customer level.
+4. **RFM Scoring via Window Functions**: 1–5 score ranking using `NTILE(5)`.
+5. **Customer Segmentation**: Classification into business segments using conditional logic.
+6. **Segment Analysis**: Customer count, segment revenue, average revenue per customer, and revenue contribution.
+7. **Country Analysis**: Revenue, orders, quantity, and customer distribution by market.
+8. **Product Analysis**: Top products by revenue, quantity, order frequency, and revenue per unit.
+9. **Monthly Sales Trends**: Monthly revenue, order volume, and quantity.
 
-🗄️ MySQL Database
+#### Core KPI SQL Query
+```sql
+SELECT 
+    ROUND(SUM(Revenue), 2) AS Total_Revenue,
+    COUNT(DISTINCT Invoice) AS Total_Orders,
+    COUNT(DISTINCT Customer_ID) AS Total_Customers,
+    COUNT(DISTINCT StockCode) AS Total_Products,
+    SUM(Quantity) AS Total_Quantity,
+    ROUND(SUM(Revenue) / COUNT(DISTINCT Invoice), 2) AS Average_Order_Value
+FROM ecommerce_cleaned_data;
+```
 
-Database used:
+#### RFM Scoring & Segmentation SQL Query
+```sql
+WITH Customer_Aggregates AS (
+    SELECT 
+        Customer_ID,
+        DATEDIFF((SELECT MAX(InvoiceDate) FROM ecommerce_cleaned_data), MAX(InvoiceDate)) AS recency,
+        COUNT(DISTINCT Invoice) AS frequency,
+        ROUND(SUM(Revenue), 2) AS monetary
+    FROM ecommerce_cleaned_data
+    GROUP BY Customer_ID
+),
+RFM_Scores AS (
+    SELECT 
+        Customer_ID,
+        recency,
+        frequency,
+        monetary,
+        6 - NTILE(5) OVER (ORDER BY recency ASC) AS R_Score,
+        6 - NTILE(5) OVER (ORDER BY frequency DESC) AS F_Score,
+        6 - NTILE(5) OVER (ORDER BY monetary DESC) AS M_Score
+    FROM Customer_Aggregates
+)
+SELECT 
+    Customer_ID,
+    recency,
+    frequency,
+    monetary,
+    R_Score,
+    F_Score,
+    M_Score,
+    (R_Score * 100 + F_Score * 10 + M_Score) AS RFM_Score,
+    CASE 
+        WHEN R_Score >= 4 AND F_Score >= 4 AND M_Score >= 4 THEN 'Champions'
+        WHEN R_Score >= 3 AND F_Score >= 4 THEN 'Loyal Customers'
+        WHEN R_Score >= 4 AND F_Score <= 3 THEN 'Potential Loyalists'
+        WHEN R_Score <= 2 AND F_Score >= 3 THEN 'At Risk'
+        WHEN R_Score <= 2 AND F_Score <= 2 THEN 'Lost Customers'
+        ELSE 'Others'
+    END AS Customer_Segment
+FROM RFM_Scores;
+```
 
-ecommerce_analytics
+---
 
-Main table:
+## 🐍 Python & Statistical Analysis
 
-ecommerce_cleaned_data
+Python (`python/ecommerce_customer_analysis.ipynb`) was used to validate SQL findings and perform deeper customer and distributional analyses using **Pandas**, **NumPy**, and **Matplotlib**.
 
-The table contains:
-
-Invoice
-StockCode
-Description
-Quantity
-InvoiceDate
-Price
-Customer_ID
-Country
-Revenue
-Data validation performed
-
-The dataset was validated for:
-
-Total row count
-NULL values
-Duplicate records
-Invalid quantities
-Invalid prices
-Revenue calculation accuracy
-Customer ID validity
-Country validity
-Stock code consistency
-Invoice format
-Invoice date validity
-
-The final dataset contained 779,425 valid transaction rows with no unexpected NULL values in the analyzed fields.
-
-🔎 SQL Business Analysis
-
-SQL was used to perform the main business analysis.
-
-Key SQL analysis areas
-1. Overall Business KPIs
-
-Calculated:
-
-Total Revenue
-Total Orders
-Total Customers
-Total Products
-Total Quantity
-Average Order Value
-2. Customer Purchase Behavior
-
-Analyzed:
-
-Top customers by revenue
-Top customers by number of orders
-Top customers by quantity purchased
-Average customer spending
-Customer purchase frequency
-3. RFM Analysis
-
-Calculated:
-
-Recency
-Frequency
-Monetary Value
-
-RFM was calculated at customer level.
-
-4. Customer Segmentation
-
-Customers were classified into meaningful business segments:
-
-Champions
-Loyal Customers
-Potential Loyalists
-At Risk
-Lost Customers
-Others
-5. Segment Analysis
-
-Compared:
-
-Customer count
-Total revenue
-Average revenue per customer
-Revenue contribution
-6. Country Analysis
-
-Analyzed:
-
-Revenue by country
-Orders by country
-Quantity by country
-Customer distribution by market
-7. Product Analysis
-
-Analyzed:
-
-Top products by revenue
-Top products by quantity
-Product order performance
-Revenue per unit
-8. Sales Trend Analysis
-
-Analyzed monthly:
-
-Revenue
-Orders
-Quantity
-
-This helped identify changes in sales performance over time.
-
-🐍 Python & Statistical Analysis
-
-Python was used to validate the SQL analysis and perform deeper customer-level analysis.
-
-Main libraries:
-
+```python
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-📈 Descriptive Statistics
 
-Important transaction-level statistics included:
-
-Mean Quantity: 13.49
-Median Quantity: 6
-Mean Price: 3.22
-Median Price: 1.95
-Mean Revenue per Transaction: 22.29
-Median Revenue per Transaction: 12.48
-
-The analysis showed a strong difference between the mean and median values, indicating that transaction values are right-skewed.
-
-👥 Customer Revenue Analysis
-
-Customer-level revenue analysis showed:
-
-Total customers: 5,878
-Median customer revenue: approximately 867.74
-Mean customer revenue: approximately 2,955
-Maximum customer revenue: approximately 580,987
-
-The large difference between mean and median indicates that a relatively small group of customers generates a disproportionately large amount of revenue.
-
-This makes customer segmentation and retention particularly important.
-
-📊 RFM Analysis
-
-RFM stands for:
-
-Recency
-
-How recently a customer purchased.
-
-Frequency
-
-How often a customer purchased.
-
-Monetary
-
-How much revenue a customer generated.
-
-Each customer was assigned an RFM score using a 1–5 scoring system.
-
-Higher scores indicate stronger customer value.
-
-The combined RFM score was calculated from:
-
-R Score × 100 + F Score × 10 + M Score
-🧩 Customer Segmentation
-
-Based on RFM scores, customers were divided into business-focused segments.
-
-Segment	Business Meaning
-Champions	Highly engaged and valuable customers
-Loyal Customers	Frequent customers with strong engagement
-Potential Loyalists	Recent customers with potential to become loyal
-At Risk	Previously valuable/frequent customers showing reduced activity
-Lost Customers	Customers with low recent activity and lower engagement
-Others	Customers who do not fit the main segment definitions
-Customer segment distribution
-
-Approximate customer counts:
-
-Segment	Customers
-Champions	1,289
-At Risk	825
-Loyal Customers	708
-Potential Loyalists	878
-Lost Customers	~2,000
-Others	Remaining customers
-💰 Customer Segment Revenue
-
-The analysis showed that the Champions segment contributes the largest share of total revenue.
-
-Approximate revenue contribution:
-
-Segment	Revenue Contribution
-Champions	~68%
-Loyal Customers	~11%
-At Risk	~9%
-Potential Loyalists	~5%
-Lost Customers	~4%
-Others	Remaining share
-
-This shows that high-value customers are extremely important to the business.
-
-⭐ High-Value Customer Analysis
-
-An IQR-based method was used to identify unusually high customer revenue values.
-
-The analysis identified approximately:
-
-633 high-value customers
-
-These customers generated approximately:
-
-₹11.34M
-
-of revenue.
-
-Their contribution was approximately:
-
-65% of total customer revenue
-
-This indicates significant revenue concentration among high-value customers.
-
-🏆 Top High-Value Customers
-
-Examples of the highest-revenue customers included:
-
-Customer ID	Revenue
-18102	₹580,987
-14646	₹528,603
-14156	₹313,438
-14911	₹291,421
-17450	₹244,784
-13694	₹195,641
-17511	₹172,133
-16446	₹168,473
-16684	₹147,143
-12415	₹144,458
-
-These customers represent important retention opportunities because losing a small number of very high-value customers could have a meaningful revenue impact.
-
-📦 Product Performance Analysis
-
-Product analysis focused on:
-
-Revenue
-Quantity sold
-Number of orders
-Revenue per unit
-Product concentration
-
-The analysis identified the highest-performing products based on both sales volume and revenue generation.
-
-A product should not be evaluated only by quantity sold because a high-volume product may generate lower revenue per unit.
-
-Therefore, both volume and monetary performance were considered.
-
-📊 Product Volume vs Revenue
-
-A scatter analysis was created to compare:
-
-Quantity Sold
-Revenue
-
-This helps identify different product behaviors:
-
-High Volume + High Revenue
-
-Strong products that contribute significantly to overall business performance.
-
-High Volume + Low Revenue
-
-Popular products that may have lower revenue per unit.
-
-Low Volume + High Revenue
-
-Potentially premium or high-value products.
-
-Low Volume + Low Revenue
-
-Products that may require further evaluation.
-
-🌍 Market & Geographic Analysis
-
-Country-level analysis showed a strong concentration of business activity in the United Kingdom.
-
-The UK generated approximately:
-
-₹14.4M
-
-of revenue, representing approximately:
-
-83% of total revenue
-
-This indicates that the business is highly dependent on its primary market.
-
-Other countries contribute smaller shares of overall revenue.
-
-📅 Sales Trend Analysis
-
-Monthly sales analysis was performed using:
-
-Revenue
-Orders
-Quantity
-
-The monthly trend showed noticeable variation in revenue throughout the analyzed period.
-
-Monthly revenue reached approximately ₹1.16M–₹1.17M during peak periods, while lower months were approximately ₹0.45M–₹0.52M.
-
-This suggests that sales performance has meaningful seasonal or time-based variation.
-
-⚠️ Outlier Analysis
-
-Statistical analysis identified extreme transaction values.
-
-One notable transaction contained:
-
-Quantity: 80,995
-Price: ₹2.08
-Revenue: ₹168,469.60
-
-The transaction was associated with:
-
-Product: PAPER CRAFT, LITTLE BIRDIE
-Customer: 16446
-
-The revenue calculation is mathematically valid.
-
-The transaction was therefore not automatically removed as an error.
-
-This demonstrates an important analytical principle:
-
-An outlier is not automatically a data error.
-
-Large transactions may represent genuine bulk purchases and should be investigated before removal.
-
-📊 Power BI Dashboard
-
-The cleaned transaction data and RFM segmentation results were loaded into Power BI.
-
-The dashboard contains three main analytical pages.
-
-📄 Page 1 — Executive Overview
-KPI Cards
-Total Revenue
-Total Orders
-Total Customers
-Total Products
-Average Order Value
-Main Visuals
-Monthly Revenue Trend
-Top Countries by Revenue
-Top 10 Products by Revenue
-Revenue Contribution by Customer Segment
-Filters
-Customer Segment
-Year
-Month
-Country
-
-This page provides a high-level view of overall business performance.
-
-📄 Page 2 — Customer & RFM Analysis
-KPI Cards
-Total Customers
-Champions
-At Risk
-Loyal Customers
-Potential Loyalists
-Lost Customers
-Main Visuals
-Revenue Contribution by Customer Segment
-Customer Recency Distribution
-Top 20 High-Value Customers
-Customer Segment Mix
-Average Revenue per Customer by Segment
-Filters
-Customer Segment
-Recency
-
-This page focuses on customer value, customer engagement, and retention opportunities.
-
-📄 Page 3 — Product & Market Analysis
-KPI Cards
-Total Revenue
-Active Products
-Average Unit Price
-Total Markets
-Revenue per Product
-Main Visuals
-Top 10 Products by Quantity Sold
-Product Volume vs Revenue Analysis
-Top 10 Products by Revenue per Unit
-Product Revenue Concentration
-Product Performance Matrix
-Filters
-Year
-Month
-Country
-Customer Segment
-
-This page focuses on product performance, product concentration, and market performance.
-
-💡 Key Business Insights
-1. High-value customers drive a large share of revenue
-
-Approximately 65% of customer revenue comes from the identified high-value customer group.
-
-Business implication
-
-Customer retention should be a major priority.
-
-2. Champions are the most important customer segment
-
-Champions represent approximately 1,289 customers and contribute approximately 68% of total revenue.
-
-Business implication
-
-The company should protect this segment with:
-
-Personalized offers
-Loyalty benefits
-Early access to products
-VIP customer treatment
-Cross-selling opportunities
-3. At-risk customers require immediate attention
-
-Approximately 825 customers were classified as At Risk.
-
-They have previously demonstrated meaningful purchasing behavior but show weaker recent activity.
-
-Business implication
-
-A targeted reactivation campaign can potentially recover valuable customers before they become Lost Customers.
-
-4. Lost customers represent a reactivation opportunity
-
-A large number of customers fall into the Lost segment.
-
-Business implication
-
-The company should test:
-
-Win-back campaigns
-Personalized discounts
-Product recommendations
-Reminder emails
-Limited-time offers
-5. Revenue is highly concentrated geographically
-
-The UK generates approximately 83% of total revenue.
-
-Business implication
-
-The UK is the core market, but geographic diversification could reduce dependence on one market.
-
-6. Product performance should be evaluated using multiple metrics
-
-Quantity alone does not explain product value.
-
-Revenue, quantity, orders, and revenue per unit provide a more complete view.
-
-Business implication
-
-Products should be managed using both volume and profitability/revenue indicators.
-
-7. Sales performance varies over time
-
-Monthly revenue shows noticeable variation between high-performing and low-performing periods.
-
-Business implication
-
-The company should investigate seasonal patterns and align:
-
-Marketing campaigns
-Inventory planning
-Promotions
-Customer campaigns
-
-with high and low demand periods.
-
-🚨 Business Problems Identified
-
-The analysis highlights several important business challenges.
-
-Problem 1 — Revenue concentration
-
-A large share of revenue depends on a relatively small group of high-value customers.
-
-Risk
-
-Losing these customers could significantly affect revenue.
-
-Problem 2 — At-risk customer base
-
-A significant number of customers are classified as At Risk.
-
-Risk
-
-Without targeted engagement, these customers may move into the Lost segment.
-
-Problem 3 — Large Lost Customer segment
-
-Many customers have low recent engagement.
-
-Risk
-
-The company may be losing repeat-purchase opportunities.
-
-Problem 4 — Market concentration
-
-The UK contributes the majority of total revenue.
-
-Risk
-
-Heavy dependence on one market creates geographic concentration risk.
-
-Problem 5 — Product concentration
-
-Revenue is not evenly distributed across all products.
-
-Risk
-
-Poor management of key products could affect overall revenue.
-
-🎯 Business Recommendations
-Recommendation 1 — Protect Champions
-
-Create a dedicated VIP retention program.
-
-Actions:
-
-Personalized offers
-Loyalty rewards
-Early access
-Exclusive promotions
-Personalized product recommendations
-Recommendation 2 — Reactivate At-Risk Customers
-
-Build an automated reactivation campaign.
-
-Example workflow:
-
-Identify At-Risk Customer
-        ↓
-Analyze Previous Purchases
-        ↓
-Create Personalized Offer
-        ↓
-Send Email / Campaign
-        ↓
-Track Response
-        ↓
-Measure Reactivation
-Recommendation 3 — Win Back Lost Customers
-
-Use targeted win-back campaigns.
-
-Possible strategies:
-
-Discount offers
-Product recommendations
-Reminder campaigns
-Seasonal promotions
-Limited-time incentives
-Recommendation 4 — Convert Potential Loyalists
-
-Potential Loyalists should receive campaigns designed to increase purchase frequency.
-
-Actions:
-
-Cross-selling
-Product bundles
-Loyalty points
-Personalized recommendations
-Repeat-purchase incentives
-Recommendation 5 — Reduce Geographic Dependence
-
-Explore opportunities in markets outside the UK.
-
-Potential strategies:
-
-Localized marketing
-Market-specific promotions
-Country-level product analysis
-Customer acquisition campaigns
-Recommendation 6 — Improve Product Portfolio Management
-
-Products should be monitored using:
-
-Revenue
-Quantity
-Orders
-Revenue per unit
-Customer demand
-
-This allows the business to identify strong products, volume-driven products, and underperforming products.
-
-📆 90-Day Business Action Plan
-Phase 1 — Days 1–30
-Focus: Customer Retention
-
-Actions:
-
-Identify Champions
-Identify At-Risk customers
-Launch VIP retention campaign
-Launch At-Risk reactivation campaign
-Track campaign response
-KPIs
-Reactivation Rate
-Repeat Purchase Rate
-Customer Revenue
-Customer Retention Rate
-Phase 2 — Days 31–60
-Focus: Customer Growth
-
-Actions:
-
-Target Potential Loyalists
-Introduce cross-selling campaigns
-Create personalized recommendations
-Analyze customer purchasing patterns
-Test different promotional strategies
-KPIs
-Purchase Frequency
-Average Order Value
-Revenue per Customer
-Conversion Rate
-Phase 3 — Days 61–90
-Focus: Market & Product Optimization
-
-Actions:
-
-Analyze non-UK markets
-Identify high-performing products
-Review low-performing products
-Analyze product revenue concentration
-Optimize marketing allocation
-KPIs
-Market Revenue
-Product Revenue
-Revenue per Unit
-New Customer Revenue
-Geographic Revenue Share
-🔬 Technical Methodology
-
-The project follows an end-to-end analytics pipeline:
-
-Raw E-Commerce Dataset
-        ↓
-Excel / Power Query
-        ↓
-Data Cleaning
-        ↓
-Cleaned Transaction Dataset
-        ↓
-MySQL
-        ↓
-SQL Business Analysis
-        ↓
-Python Statistical Analysis
-        ↓
-RFM Scoring
-        ↓
-Customer Segmentation
-        ↓
-Power BI Dashboard
-        ↓
-Business Insights
-        ↓
-Recommendations
-📐 RFM Methodology
-Recency
-
-Calculated as the number of days since the customer's most recent purchase.
-
-Recency =
-Analysis Date − Last Purchase Date
-Frequency
-
-Calculated as the number of unique invoices/orders made by the customer.
-
-Frequency =
-Number of Distinct Orders
-Monetary
-
-Calculated as the total revenue generated by the customer.
-
-Monetary =
-Sum of Customer Revenue
-
-Customers were then assigned RFM scores from 1 to 5.
-
-📊 Statistical Techniques Used
-
-The project applied several statistical concepts:
-
-Mean
-Median
-Standard Deviation
-Percentiles
-Interquartile Range
-Outlier Detection
-Distribution Analysis
-Correlation Analysis
-Revenue Contribution Analysis
-
-The analysis demonstrated why median and distribution analysis are important when customer revenue contains extreme values.
-
-📁 Project Deliverables
-
-This repository contains the major project outputs:
-
-SQL
-sql/ecommerce_analysis.sql
-
-Contains SQL queries for:
-
-Business KPIs
-Customer analysis
-RFM analysis
-Customer segmentation
-Product analysis
-Country analysis
-Sales trend analysis
-Python
-python/ecommerce_customer_analysis.ipynb
-
-Contains:
-
-Data inspection
-Data quality analysis
-Feature engineering
-Statistical analysis
-Customer analysis
-RFM analysis
-Segmentation
-Outlier analysis
-High-value customer analysis
-Correlation analysis
-Power BI
-powerbi/ecommerce_customer_analytics.pbix
-
-Contains the interactive business dashboard with:
-
-Executive Overview
-Customer & RFM Analysis
-Product & Market Analysis
-Business Report
-report/Ecommerce_Customer_Analytics_Business_Report.pdf
-
-Contains the complete business analysis, insights, recommendations, and 90-day action plan.
-
-Documentation
-documentation/project_methodology.md
-
-Contains the project methodology and analytical workflow.
-
-🚀 Future Analytics Opportunities
-
-This project can be extended with more advanced analytics.
-
-Customer Lifetime Value
-
-Estimate future customer value and prioritize retention based on expected lifetime revenue.
-
-Churn Prediction
-
-Build a machine learning model to predict which customers are likely to stop purchasing.
-
-Customer Recommendation System
-
-Recommend products based on previous purchasing behavior.
-
-Sales Forecasting
-
-Forecast future revenue and demand using historical sales patterns.
-
-Customer Cohort Analysis
-
-Analyze customer retention by acquisition month or period.
-
-Market Expansion Analysis
-
-Identify countries with high potential for customer acquisition and revenue growth.
-
-🧠 What This Project Demonstrates
-
-This project demonstrates practical skills across the complete data analytics lifecycle:
-
-Data Preparation
-Excel
-Power Query
-Data Cleaning
-Data Validation
-SQL
-SELECT
-WHERE
-GROUP BY
-HAVING
-JOIN
-CASE
-Subqueries
-CTE
-Window Functions
-RFM Analysis
-Business KPIs
-Python
-Pandas
-NumPy
-Data Cleaning
-Feature Engineering
-Statistical Analysis
-Outlier Analysis
-Customer Analysis
-Business Analytics
-Customer Segmentation
-RFM Analysis
-Revenue Concentration
-Product Analysis
-Market Analysis
-Customer Retention
-Business Recommendations
-Power BI
-Data Modeling
-DAX
-KPI Cards
-Interactive Filters
-Customer Segmentation Dashboard
-Product Analysis
-Executive Reporting
-Communication
-Business storytelling
-Insight generation
-Data-driven recommendations
-Action planning
-Professional business reporting
-🔄 End-to-End Project Flow
-             RAW DATA
-                 ↓
-        EXCEL / POWER QUERY
-                 ↓
-        CLEAN & TRANSFORM
-                 ↓
-              MySQL
-                 ↓
-          SQL ANALYSIS
-                 ↓
-              PYTHON
-                 ↓
-       STATISTICAL ANALYSIS
-                 ↓
-          RFM SEGMENTATION
-                 ↓
-             POWER BI
-                 ↓
-        BUSINESS INSIGHTS
-                 ↓
-        RECOMMENDATIONS
-                 ↓
-         90-DAY ACTION PLAN
-📌 Project Summary
-
-E-Commerce Customer Analytics & RFM Segmentation transforms more than 779K cleaned transaction records into a complete customer and business intelligence solution.
-
-The project identifies:
-
-High-value customers
-Champions
-Loyal customers
-Potential Loyalists
-At-Risk customers
-Lost customers
-High-performing products
-Important markets
-Revenue concentration
-Sales trends
-Business risks
-Customer retention opportunities
-
-The analysis shows that customer value is highly concentrated, with Champions and high-value customers contributing a large share of total revenue.
-
-The final dashboard and business report convert these findings into practical recommendations focused on:
-
-Customer Retention → Customer Growth → Product Optimization → Market Expansion
-
-👨‍💻 Author
-
-Aditya Narayan Panda
-
-B.Tech Computer Science & Engineering
-
-Interested in:
-
-Data Analytics
-Business Intelligence
-SQL
-Python
-Power BI
-Data-Driven Decision Making
-⭐ Project Highlights
-779K+ cleaned transaction records
-5.8K+ customers analyzed
-4.6K+ products analyzed
-RFM-based customer segmentation
-633+ high-value customers identified
-65%+ revenue contribution from high-value customers
-68%+ revenue contribution from Champions
-83%+ revenue contribution from the UK
-3-page interactive Power BI dashboard
-Complete SQL + Python + BI workflow
-Professional business report
-90-day action plan
-🏁 Final Outcome
-
-This project demonstrates how raw e-commerce transaction data can be transformed into a complete business analytics solution using:
-
-Excel → Power Query → MySQL → SQL → Python → Statistics → RFM → Power BI → Business Strategy
-
-The goal is not only to analyze what happened, but also to understand:
-
-Why it happened, who matters most, where the opportunities are, and what the business should do next.
+# Summary statistics for transaction-level metrics
+df[['Quantity', 'Price', 'Revenue']].describe()
+```
+
+### Transaction-Level Descriptive Statistics
+| Metric | Mean | Median |
+|---|---|---|
+| **Quantity** | 13.49 | 6.00 |
+| **Price** | ₹3.22 | ₹1.95 |
+| **Revenue per Transaction** | ₹22.29 | ₹12.48 |
+
+The substantial difference between the mean and median confirms that transaction data is heavily right-skewed by bulk orders.
+
+### Customer Revenue Statistics
+* **Total Customers Analyzed**: 5,878
+* **Mean Customer Revenue**: Approximately ₹2,955
+* **Median Customer Revenue**: Approximately ₹867.74
+* **Standard Deviation**: Approximately ₹14,440.8
+* **Minimum Customer Revenue**: Approximately ₹2.95
+* **Maximum Customer Revenue**: Approximately ₹580,987.04
+
+The wide gap between the median (₹867.74) and mean (₹2,955) confirms that a small group of customers generates a disproportionate share of total revenue.
+
+### Outlier Analysis
+Statistical review identified extreme transaction values, notably:
+* **Customer ID**: `16446`
+* **Product**: `PAPER CRAFT, LITTLE BIRDIE`
+* **Quantity**: `80,995`
+* **Price**: `₹2.08`
+* **Revenue**: `₹168,469.60`
+
+**Interpretation**: This transaction is a mathematically valid extreme transaction and was retained because an outlier is not automatically a data error. Domain validation should be performed before removing such observations.
+
+---
+
+## 📐 RFM Scoring & Customer Segmentation
+
+RFM analysis evaluates customers across three core behavioral dimensions:
+* **Recency ($R$)**: Days since the customer's most recent purchase (lower is better).
+* **Frequency ($F$)**: Count of distinct orders placed (higher is better).
+* **Monetary ($M$)**: Total revenue generated (higher is better).
+
+Scores from **1 to 5** were calculated:
+* `R_Score = 6 - NTILE(5) OVER (ORDER BY recency ASC)`
+* `F_Score = 6 - NTILE(5) OVER (ORDER BY frequency DESC)`
+* `M_Score = 6 - NTILE(5) OVER (ORDER BY monetary DESC)`
+* `Combined RFM Score = R_Score * 100 + F_Score * 10 + M_Score`
+
+### Segmentation Logic
+* **Champions**: `R >= 4 AND F >= 4 AND M >= 4` (Highly engaged, high-value customers)
+* **Loyal Customers**: `R >= 3 AND F >= 4` (Frequent buyers with consistent activity)
+* **Potential Loyalists**: `R >= 4 AND F <= 3` (Recent customers with potential to become frequent buyers)
+* **At Risk**: `R <= 2 AND F >= 3` (Previously frequent customers showing declining recent activity)
+* **Lost Customers**: `R <= 2 AND F <= 2` (Customers with low recent activity and lower engagement)
+* **Others**: Remaining customer profiles
+
+### Customer Segment Distribution & Revenue Share
+| Customer Segment | Customer Count | Approximate Revenue Contribution | Business Meaning |
+|---|---|---|---|
+| **Champions** | 1,289 | ~68% | Highly engaged, top revenue contributors |
+| **Loyal Customers** | 708 | ~11% | Frequent purchasers with steady relationship |
+| **At Risk** | 825 | ~9% | Previously active customers showing reduced activity |
+| **Potential Loyalists** | 878 | ~5% | Recent buyers with opportunity to build purchase frequency |
+| **Lost Customers** | ~2,000 | ~4% | Inactive customers with low engagement |
+| **Others** | Remaining | Remaining share | Customers outside primary segment bounds |
+| **Total** | **5,878** | **100%** | |
+
+---
+
+## ⭐ High-Value Customer Analysis
+
+Customer revenue values were evaluated using an Interquartile Range (IQR) method to identify unusually high spenders.
+
+* **Identified High-Value Customers**: **633 customers**
+* **Total Revenue from High-Value Customers**: **Approximately ₹11.34M**
+* **Revenue Contribution**: **Approximately 65.3%** of total customer revenue
+
+### Top High-Value Customer Revenue Examples
+| Customer ID | Revenue (₹) |
+|:---:|:---:|
+| `18102` | ₹580,987.04 |
+| `14646` | ₹528,602.52 |
+| `14156` | ₹313,437.62 |
+| `14911` | ₹291,420.81 |
+| `17450` | ₹244,784.25 |
+| `13694` | ₹195,640.69 |
+| `17511` | ₹172,132.87 |
+| `16446` | ₹168,472.50 |
+| `16684` | ₹147,142.77 |
+| `12415` | ₹144,458.37 |
+
+**Strategic Implication**: High-value customers represent critical retention priorities because the loss of a small number of top customers could meaningfully impact total revenue.
+
+---
+
+## 🌍 Geographic Market & Product Performance
+
+### Geographic Analysis
+* **Total Markets Analyzed**: 38 countries
+* **United Kingdom Revenue**: Approximately ₹14.4M
+* **United Kingdom Revenue Share**: Approximately 83% of total revenue
+
+**Strategic Implication**: Revenue concentration in the UK indicates geographic dependency and suggests an opportunity to explore international market diversification.
+
+### Product Performance Analysis
+Products were evaluated across revenue, quantity sold, order count, and revenue per unit:
+* **High Volume + High Revenue**: Strong core products driving both sales volume and revenue.
+* **High Volume + Low Revenue**: Popular items that generate volume but carry lower revenue per unit.
+* **Low Volume + High Revenue**: Products with higher revenue per unit that generate meaningful revenue from fewer sales.
+* **Low Volume + Low Revenue**: Long-tail items requiring portfolio review.
+
+Evaluating products using volume and revenue metrics together ensures items are not judged solely by units sold.
+
+### Sales Trends
+* **Monthly Revenue Variation**: Monthly revenue varied between approximately ₹0.45M–₹0.52M in lower periods and ₹1.16M–₹1.17M during peak periods.
+* Sales performance shows noticeable time-based and seasonal patterns that can inform promotional scheduling and inventory planning.
+
+---
+
+## 📈 Power BI Interactive Dashboard
+
+The interactive Power BI file (`powerbi/ecommerce_customer_analytics.pbix`) contains three analytical pages:
+
+### Page 1 — Executive Overview
+* **KPI Cards**: Total Revenue, Total Orders, Total Customers, Total Products, Average Order Value
+* **Main Visuals**:
+  * Monthly Revenue Trend
+  * Top Countries by Revenue
+  * Top 10 Products by Revenue
+  * Revenue Contribution by Customer Segment
+* **Slicers**: Customer Segment, Year, Month, Country
+
+### Page 2 — Customer & RFM Analysis
+* **KPI Cards**: Total Customers, Champions, At Risk, Loyal Customers, Potential Loyalists, Lost Customers
+* **Main Visuals**:
+  * Revenue Contribution by Customer Segment
+  * Customer Recency Distribution
+  * Top 20 High-Value Customers
+  * Customer Segment Mix
+  * Average Revenue per Customer by Segment
+* **Slicers**: Customer Segment, Recency
+
+### Page 3 — Product & Market Analysis
+* **KPI Cards**: Total Revenue, Active Products, Average Unit Price, Total Markets, Revenue per Product
+* **Main Visuals**:
+  * Top 10 Products by Quantity Sold
+  * Product Volume vs Revenue Analysis
+  * Top 10 Products by Revenue per Unit
+  * Product Revenue Concentration
+  * Product Performance Matrix
+* **Slicers**: Year, Month, Country, Customer Segment
+
+### Key Power BI Measures
+* `Total Revenue`
+* `Total Orders`
+* `Total Customers`
+* `Total Products`
+* `Total Quantity`
+* `Average Order Value`
+* `Active Products`
+* `Total Markets`
+* `Average Unit Price`
+* `Revenue per Product`
+* `Revenue per Unit`
+
+RFM segmentation data is connected to transaction records via `Customer ID`.
+
+---
+
+## 💡 Key Business Insights
+
+1. **High-Value Customers Drive Revenue**: Approximately 65.3% of revenue originates from the 633 identified high-value customers, making customer retention a primary commercial priority.
+2. **Champions Are the Core Segment**: 1,289 Champions contribute approximately 68% of total revenue. Protecting this segment with loyalty programs and priority service is critical.
+3. **At-Risk Customers Need Immediate Engagement**: 825 customers have demonstrated past value but show declining recent activity. Proactive engagement can prevent churn into the Lost segment.
+4. **Lost Customers Represent a Win-Back Opportunity**: Around 2,000 customers fall into the Lost segment, offering an audience for targeted win-back campaigns and re-engagement promotions.
+5. **Geographic Dependency**: The UK generates approximately 83% of revenue, indicating strong core market performance alongside an opportunity for international expansion.
+6. **Multi-Metric Product Evaluation**: Quantity alone does not explain product value; revenue, order frequency, and revenue per unit provide a complete perspective on portfolio performance.
+7. **Seasonality Influences Performance**: Monthly revenue swings from ₹0.45M–₹0.52M to peak months of ₹1.16M–₹1.17M highlight the value of aligning promotions with demand cycles.
+
+---
+
+## 🚨 Business Problems Identified
+
+* **Problem 1 — Revenue Concentration**: A large share of revenue depends on a small group of high-value accounts. Losing key customers could noticeably affect business performance.
+* **Problem 2 — At-Risk Customer Base**: 825 customers are at risk of lapsing without structured re-engagement.
+* **Problem 3 — Large Inactive Customer Base**: Approximately 2,000 customers have become inactive, representing missed repeat-purchase opportunities.
+* **Problem 4 — Market Concentration**: The UK contributes ~83% of revenue, creating geographic dependence.
+* **Problem 5 — Product Concentration**: Revenue is unevenly distributed across products, requiring active catalog management.
+
+---
+
+## 🎯 Strategic Business Recommendations
+
+1. **Protect Champions**: Introduce dedicated loyalty initiatives, VIP retention programs, early product access, and personalized product recommendations.
+2. **Reactivate At-Risk Customers**: Deploy targeted reactivation campaigns:
+   $$\text{Identify At-Risk Customers} \rightarrow \text{Analyze Past Purchases} \rightarrow \text{Personalized Re-engagement} \rightarrow \text{Track Response}$$
+3. **Win Back Lost Customers**: Use targeted win-back campaigns, reminder emails, seasonal incentives, and special promotional offers.
+4. **Convert Potential Loyalists**: Increase purchase frequency among Potential Loyalists using cross-selling, product bundles, and repeat-purchase incentives.
+5. **Analyze High-Value Customer Patterns**: Study purchasing behaviors of top-spending accounts to tailor ordering schedules and product availability.
+6. **Explore Geographic Diversification**: Analyze opportunities in non-UK markets to reduce single-country reliance.
+7. **Evaluate Product Portfolio Holistically**: Monitor products across revenue, quantity, orders, and revenue per unit to identify volume drivers, revenue generators, and underperforming items.
+8. **Align Operations with Sales Trends**: Plan marketing promotions, staffing, and inventory around historical peak and off-peak monthly revenue periods.
+
+---
+
+## 📆 90-Day Business Action Plan
+
+The following phased roadmap outlines recommended strategic priorities:
+
+### Phase 1 — Days 1–30: Customer Retention
+* **Focus**: Securing core customer relationships and addressing early churn signals.
+* **Recommended Actions**:
+  * Identify and review Champions accounts for VIP retention efforts.
+  * Launch an initial reactivation campaign targeted at the 825 At-Risk customers.
+  * Monitor customer response and engagement rates.
+* **Recommended KPIs**: Reactivation Rate, Customer Retention Rate, Repeat Purchase Rate, Segment Revenue.
+
+### Phase 2 — Days 31–60: Customer Growth
+* **Focus**: Increasing purchase frequency and transaction value.
+* **Recommended Actions**:
+  * Deliver targeted cross-selling and bundle recommendations to Potential Loyalists.
+  * Evaluate promotional incentives to encourage repeat purchases.
+  * Review customer purchasing intervals across active segments.
+* **Recommended KPIs**: Purchase Frequency, Average Order Value (AOV), Revenue per Customer, Conversion Rate.
+
+### Phase 3 — Days 61–90: Market & Product Optimization
+* **Focus**: Diversification and catalog efficiency.
+* **Recommended Actions**:
+  * Analyze top international markets to identify expansion potential.
+  * Review product performance matrix to identify high-potential and underperforming SKUs.
+  * Optimize promotional allocations across top-performing product categories.
+* **Recommended KPIs**: Non-UK Revenue Share, Product Revenue per Unit, Market Revenue, Category Revenue.
+
+---
+
+## 🔬 Technical Methodology
+
+```text
+RAW E-COMMERCE DATASET (Online Retail II)
+         │
+         ▼
+EXCEL & POWER QUERY (Data Cleaning, Overlap Removal, Revenue Feature)
+         │
+         ▼
+CLEANED TRANSACTION DATASET (779,425 Records)
+         │
+         ▼
+MySQL DATABASE (`ecommerce_analytics`, DDL, Indexing)
+         │
+         ▼
+SQL BUSINESS ANALYSIS (KPIs, CTEs, Window Functions, RFM)
+         │
+         ▼
+PYTHON STATISTICAL ANALYSIS (Pandas, NumPy, Matplotlib, IQR Outliers)
+         │
+         ▼
+RFM SCORING & CUSTOMER SEGMENTATION (R, F, M 1–5 Scoring)
+         │
+         ▼
+POWER BI 3-PAGE DASHBOARD (DAX Measures, Segment Slicers)
+         │
+         ▼
+BUSINESS INSIGHTS & STRATEGIC RECOMMENDATIONS
+         │
+         ▼
+90-DAY BUSINESS ACTION PLAN
+```
+
+---
+
+## 📁 Project Deliverables
+
+* **SQL Script** (`sql/ecommerce_analysis.sql`):
+  * DDL schema and table definitions
+  * Overall business KPIs
+  * Customer purchase behavior
+  * RFM calculation and scoring
+  * Customer segmentation
+  * Product and country analysis
+  * Monthly sales trends
+* **Python Notebook** (`python/ecommerce_customer_analysis.ipynb`):
+  * Data inspection and quality validation
+  * Descriptive statistics (mean, median, standard deviation)
+  * IQR outlier analysis
+  * High-value customer revenue analysis
+  * Customer segmentation summary
+  * Data visualizations and correlation checks
+* **Power BI Workbook** (`powerbi/ecommerce_customer_analytics.pbix`):
+  * 3-page interactive business dashboard
+  * Executive Overview, Customer & RFM Analysis, Product & Market Analysis
+* **Business Report** (`report/Ecommerce_Customer_Analytics_Business_Report.pdf`):
+  * Comprehensive business analysis, findings, and recommendations
+* **Documentation** (`documentation/project_methodology.md`):
+  * Documentation of data cleaning steps and methodology
+
+---
+
+## 🚀 Future Analytics Opportunities
+
+The following areas represent practical directions for extending this project:
+- **Predictive Churn Modeling**: Train classification models to estimate customer churn risk before activity ceases.
+- **Customer Lifetime Value (CLV)**: Model expected future revenue per customer segment to prioritize retention investments.
+- **Market Basket Analysis**: Apply association rule mining to identify items frequently purchased together.
+- **Sales Forecasting**: Forecast future monthly revenue using time-series forecasting techniques.
+- **Customer Cohort Analysis**: Track customer retention and revenue curves across acquisition cohorts over time.
+- **Automated Data Pipelines**: Schedule regular ETL updates to refresh SQL tables and dashboard reports automatically.
+
+---
+
+## 🧠 What This Project Demonstrates
+
+* **Data Engineering**: Data cleaning, deduplication, type casting, and schema validation with Power Query and Excel.
+* **Relational Database & SQL**: Schema design, aggregations, conditional expressions (`CASE`), common table expressions (`WITH`), and window ranking functions (`NTILE`).
+* **Statistical Analysis**: Distribution analysis, right-skewed data handling, mean vs. median comparisons, standard deviation, and IQR-based outlier screening using Python.
+* **Customer Analytics**: RFM modeling, scoring logic, and customer segmentation framework design.
+* **Business Intelligence & Reporting**: Multi-page Power BI dashboard design, data modeling, DAX measure creation, and interactive reporting.
+* **Commercial Acumen**: Translating analytical findings into root causes, strategic business recommendations, and a phased 90-day action plan.
+
+---
+
+## 💻 Getting Started
+
+### Prerequisites
+* MySQL Server 8.0+
+* Python 3.9+ with `pandas`, `numpy`, and `matplotlib`
+* Microsoft Power BI Desktop
+
+### Setup Steps
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/adityanarayanpanda/ecommerce-customer-analytics-rfm.git
+   cd ecommerce-customer-analytics-rfm
+   ```
+2. **Execute SQL Scripts**:
+   ```bash
+   mysql -u your_username -p < sql/ecommerce_analysis.sql
+   ```
+3. **Run Python Analysis**:
+   ```bash
+   jupyter notebook python/ecommerce_customer_analysis.ipynb
+   ```
+4. **Open Power BI Dashboard**:
+   - Open `powerbi/ecommerce_customer_analytics.pbix` in Microsoft Power BI Desktop.
+   - Refresh data sources to view the interactive reports.
+
+---
+
+## 👨‍💻 Author
+
+**Aditya Narayan Panda**  
+*B.Tech in Computer Science & Engineering*  
+*Interested in Data Analytics, Business Intelligence, SQL, Python, and Power BI*
+
+* **GitHub**: [github.com/adityanarayanpanda](https://github.com/adityanarayanpanda)
+* **LinkedIn**: [linkedin.com/in/adityanarayanpanda](https://www.linkedin.com/in/adityanarayanpanda)
+* **Email**: [adityapanda0879@gmail.com](mailto:adityapanda0879@gmail.com)
